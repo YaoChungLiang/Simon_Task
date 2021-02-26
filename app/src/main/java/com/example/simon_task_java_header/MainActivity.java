@@ -2,8 +2,10 @@ package com.example.simon_task_java_header;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.TypedValue;
+import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
@@ -24,13 +26,17 @@ public class MainActivity extends AppCompatActivity {
         testIntro.setTextSize(pixels);
         Button startButton = (Button)findViewById(R.id.start_button);
         startButton.setText(getString(R.string.start_button));
+
     }
 
     @Override
     protected void onStart(){
         super.onStart();
+    }
 
-
+    public void startPractice(View v){
+        Intent practiceIntent = new Intent(MainActivity.this, PracticeActivity.class);
+        startActivity(practiceIntent);
     }
 
 
