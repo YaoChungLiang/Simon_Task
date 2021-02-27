@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void startPractice(View v){
         Intent practiceIntent = new Intent(MainActivity.this, PracticeActivity.class);
+        practiceIntent.putExtra("SESSION","practice");
         startActivity(practiceIntent);
     }
 
